@@ -1,0 +1,10 @@
+antigen use oh-my-zsh
+
+antigen bundles <<EOBUNDLES
+        zsh-users/zsh-autosuggestions
+        zsh-users/zsh-syntax-highlighting
+EOBUNDLES
+
+antigen theme romkatv/powerlevel10k
+
+antigen apply
