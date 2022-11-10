@@ -1,5 +1,4 @@
 # Dotfiles
 
 ## Installation
-
-TBD
+Run `install.sh`
