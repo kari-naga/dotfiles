@@ -1,3 +1,6 @@
 [user]
     name = Kari Naga
     email = 4119937+kari-naga@users.noreply.github.com
+
+[init]
+    defaultBranch = main
