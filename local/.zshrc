@@ -12,7 +12,7 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/atom/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -20,10 +20,10 @@ compinit
 
 alias ls='ls --color=auto'
 
-export PATH="$PATH:/mnt/c/Users/Kari/AppData/Local/Programs/Microsoft VS Code/bin"
+export ZDOTDIR="~/.zsh"
 
-source ~/.zsh/antigen.zsh
-antigen init ~/.zsh/.antigenrc
+source ${ZDOTDIR}/.antidote/antidote.zsh
+antidote load
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
