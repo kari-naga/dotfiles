@@ -8,14 +8,17 @@ ZDOTDIR="${BASEDIR}/.zsh"
 # zsh
 if [ -z "$CODESPACES" ]; then
     ln -sf ${BASEDIR}/remote/.zshrc ~/.zshrc
+    ln -sf ${BASEDIR}/remote/.zshrc $ZDOTDIR/.zshrc
     ln -sf ${BASEDIR}/remote/.p10k.zsh ~/.p10k.zsh
 else
     if [ -f "/etc/wsl.conf" ]; then
         ln -sf ${BASEDIR}/wsl/.zshrc ~/.zshrc
+        ln -sf ${BASEDIR}/wsl/.zshrc $ZDOTDIR/.zshrc
     else
         ln -sf ${BASEDIR}/native/.zshrc ~/.zshrc
+        ln -sf ${BASEDIR}/native/.zshrc $ZDOTDIR/.zshrc
     fi
-    ln -s ${BASEDIR}/.p10k.zsh ~/.p10k.zsh
+    ln -sf ${BASEDIR}/.p10k.zsh ~/.p10k.zsh
 fi
 ln -sf ${ZDOTDIR} ~/.zsh
 sudo chsh "$(id -un)" --shell "/usr/bin/zsh"
