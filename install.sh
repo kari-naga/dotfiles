@@ -1,14 +1,23 @@
 #!/bin/bash
 
-### Codespaces install script
+### Install script
 
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ZDOTDIR="${BASEDIR}/.zsh"
 
 # zsh
-ln -s ${BASEDIR}/remote/.zshrc ~/.zshrc
-ln -s ${BASEDIR}/remote/.p10k.zsh ~/.p10k.zsh
-ln -s ${ZDOTDIR} ~/.zsh
+if [ -z "$CODESPACES" ]; then
+    ln -sf ${BASEDIR}/remote/.zshrc ~/.zshrc
+    ln -sf ${BASEDIR}/remote/.p10k.zsh ~/.p10k.zsh
+else
+    if [ -f "/etc/wsl.conf" ]; then
+        ln -sf ${BASEDIR}/wsl/.zshrc ~/.zshrc
+    else
+        ln -sf ${BASEDIR}/native/.zshrc ~/.zshrc
+    fi
+    ln -s ${BASEDIR}/.p10k.zsh ~/.p10k.zsh
+fi
+ln -sf ${ZDOTDIR} ~/.zsh
 sudo chsh "$(id -un)" --shell "/usr/bin/zsh"
 
 # git
