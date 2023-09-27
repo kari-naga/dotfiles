@@ -16,7 +16,7 @@ ENVDIR="${BASEDIR}/${ENV}"
 # zsh
 ln -sf "${BASEDIR}/zsh" "${ZDOTDIR}"
 git clone --depth=1 https://github.com/mattmc3/antidote.git "${ZDOTDIR}/.antidote"
-find "${ENVDIR}" -maxdepth 1 -print "%P\n" | while read file; do ln -sf "${ENVDIR}/$file" "$file"; done
+find "${ENVDIR}" -mindepth 1 -printf "%P\n" | while read file; do ln -sf "${ENVDIR}/$file" "${ZDOTDIR}/$file"; done
 cat << 'EOF' >| ~/.zshenv
 export ZDOTDIR=~/.config/zsh
 [[ -f $ZDOTDIR/.zshenv ]] && . $ZDOTDIR/.zshenv
