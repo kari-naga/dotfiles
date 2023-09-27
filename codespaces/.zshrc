@@ -6,13 +6,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE="${ZDOTDIR}/.histfile"
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '~/.zshrc'
+zstyle :compinstall filename '${ZDOTDIR}/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -20,14 +20,12 @@ compinit
 
 alias ls='ls --color=auto'
 
-export ZDOTDIR="${HOME}/.zsh"
-
-source ${ZDOTDIR}/.antidote/antidote.zsh
+source "${ZDOTDIR}/.antidote/antidote.zsh"
 antidote load
 
 autoload -Uz promptinit
 promptinit
 prompt powerlevel10k
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# To customize prompt, run `p10k configure` or edit ${ZDOTDIR}/.p10k.zsh.
+[[ ! -f ${ZDOTDIR}/.p10k.zsh ]] || source "${ZDOTDIR}/.p10k.zsh"
