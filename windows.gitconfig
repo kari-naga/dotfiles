@@ -1,0 +1,22 @@
+[core]
+	editor = \"C:\\Users\\Kari\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+[user]
+	name = Kari Naga
+	email = 4119937+kari-naga@users.noreply.github.com
+	signingkey = ~/.ssh/id_ed25519.pub
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[init]
+	defaultBranch = main
+[credential]
+	helper = manager
+[credential "helperselector"]
+	selected = manager
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true

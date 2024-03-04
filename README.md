@@ -2,4 +2,4 @@
 
 ## Installation
 
-Run `install.sh` for Codespaces development
+Run `install.sh`
