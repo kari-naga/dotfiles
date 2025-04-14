@@ -6,8 +6,14 @@
 [gpg]
     format = ssh
 
+[gpg "ssh"]
+    program = "/mnt/c/Users/Kari/AppData/Local/1Password/app/8/op-ssh-sign-wsl"
+
 [commit]
     gpgsign = true
 
 [init]
     defaultBranch = main
+
+[core]
+	sshCommand = ssh.exe

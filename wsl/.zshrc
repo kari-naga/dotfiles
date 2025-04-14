@@ -19,10 +19,12 @@ compinit
 # End of lines added by compinstall
 
 alias ls='ls --color=auto'
+alias ssh='ssh.exe'
+alias ssh-add='ssh-add.exe'
 
 export PATH="$PATH:/mnt/c/Users/Kari/AppData/Local/Programs/Microsoft VS Code/bin"
 
-source "${ZDOTDIR}/ssh-agent.zsh"
+# source "${ZDOTDIR}/ssh-agent.zsh"
 
 source "${ZDOTDIR}/.antidote/antidote.zsh"
 antidote load

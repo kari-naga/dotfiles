@@ -20,7 +20,7 @@ compinit
 
 alias ls='ls --color=auto'
 
-source "${ZDOTDIR}/ssh-agent.zsh"
+# source "${ZDOTDIR}/ssh-agent.zsh"
 
 source "${ZDOTDIR}/.antidote/antidote.zsh"
 antidote load
