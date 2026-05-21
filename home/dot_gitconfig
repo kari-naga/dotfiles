@@ -1,0 +1,16 @@
+[user]
+    name = Kari Naga
+    email = 4119937+kari-naga@users.noreply.github.com
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA1TB1eyN2NcLI/DhHmA6gxmY4W/+VXtMt29bDpp2jdq
+
+[gpg]
+    format = ssh
+
+[commit]
+    gpgsign = true
+
+[gpg "ssh"]
+    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+
+[init]
+    defaultBranch = main
