@@ -1,5 +1,7 @@
-# Dotfiles
+# dotfiles
 
-## Installation
+Install [chezmoi](https://github.com/twpayne/chezmoi), then run
 
-Run `install.sh`
+```sh
+chezmoi init kari-naga
+```
